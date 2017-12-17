@@ -1,0 +1,22 @@
+{
+	"headers": {
+		"Access-Control-Allow-Methods": "GET, HEAD, OPTIONS, POST",
+		"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+	},
+	"localhost": {
+		"port": 3000
+	},
+	"gcp":{
+		"functionName": "housiapi",
+		"memory": 128
+	},
+	"env": {
+		"active": "default",
+		"default": {
+			"hostingType": "localhost"
+		},
+		"prod": {
+			"hostingType": "now"
+		}
+	}
+}
