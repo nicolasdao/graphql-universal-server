@@ -4,7 +4,7 @@
 
 # Welcome To The Universal GraphQL Server Template
 
-Create your own GraphQL server in less than 1 minute. Clone this project, and then modify the code under `./src/graphql` and you're set. 
+_*Create your own GraphQL server in less than 1 minute*_. Clone this project, and then modify the code under `./src/graphql` and you're set. 
 ```
 git clone https://github.com/nicolasdao/graphql-universal-server.git
 cd graphql-universal-server
