@@ -2,7 +2,15 @@
 
 > DISCLAIMER - Though we're recommending deploying using [_Zeit Now_](https://zeit.co/now), we have no affiliation whatsoever with that entity. We do not receive any incentive or are looking for any gain in promoting that tool and infrastructure. 
 
-# Welcome To The Universal GraphQL Server
+# Welcome To The Universal GraphQL Server Template
+
+Create your own GraphQL server in less than 1 minute. Clone this project, and then modify the code under `./src/graphql` and you're set. 
+```
+git clone https://github.com/nicolasdao/graphql-universal-server.git
+cd graphql-universal-server
+npm install
+npm run dev
+```
 
 This server will serve both a [GraphQL](http://graphql.org/learn/) endpoint as well as a [GraphiQL Web UI](https://github.com/graphql/graphiql). It is ready to be deployed on any of the following 3 platforms:
 1. Locally (using express under the hood)
