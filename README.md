@@ -4,7 +4,7 @@
 
 # Welcome To The Universal GraphQL Server
 
-This server is ready to be deployed on any of the following 3 platforms:
+This server will serve both a [GraphQL](http://graphql.org/learn/) endpoint as well as a [GraphiQL Web UI](https://github.com/graphql/graphiql). It is ready to be deployed on any of the following 3 platforms:
 1. Locally (using express under the hood)
 2. Serverless [Zeit Now](https://zeit.co/now) (using express under the hood)
 3. FaaS [Google Cloud Function](https://cloud.google.com/functions/) (incl. Firebase Function)
@@ -20,7 +20,11 @@ npm install
 npm run dev
 ```
 
-The second command will start an express server and will automatically reload your code thanks to [_node-dev_](https://github.com/fgnass/node-dev).
+The second command will start an express server and will automatically reload your code thanks to [_node-dev_](https://github.com/fgnass/node-dev). 2 endpoints will be immediately available:
+
+- [http://localhost:4000](http://localhost:4000): This is the GraphQL endpoint that your client can start querying.
+- [http://localhost:4000/graphiql](http://localhost:4000/graphiql): This is the GraphiQL Web UI that you can use to test and query your GraphQL server. 
+
 ## Serverless Deployment
 #### Prerequisite
 All deployments to serverless are managed by the awesome [_Zeit Now_](https://zeit.co/now). That means [_Zeit Now_](https://zeit.co/now) must be installed. Simply run:
