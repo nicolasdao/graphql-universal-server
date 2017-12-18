@@ -11,11 +11,10 @@
 		"memory": 128
 	},
 	"env": {
-		"active": "default",
 		"default": {
 			"hostingType": "localhost"
 		},
-		"prod": {
+		"production": {
 			"hostingType": "now"
 		}
 	}
