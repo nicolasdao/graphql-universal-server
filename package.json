@@ -2,7 +2,7 @@
   "name": "yourapp",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node-dev index.js",
+    "dev": "NODE_ENV=default node-dev index.js",
     "start": "NODE_ENV=production node index.js",
     "test": "mocha"
   },
