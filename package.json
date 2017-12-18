@@ -14,7 +14,7 @@
     "lodash": "^4.17.4",
     "http-errors": "^1.6.1",
     "schemaglue": "^1.5.1",
-    "webfunc": "^0.8.0-alpha.5"
+    "webfunc": "^0.8.0-alpha.6"
   },
   "devDependencies": {
     "chai": "^4.1.0",
