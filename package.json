@@ -1,26 +1,27 @@
 {
-  "name": "yourapp",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "NODE_ENV=default node-dev index.js",
-    "start": "NODE_ENV=production node index.js",
-    "test": "mocha"
-  },
-  "dependencies": {
-    "graphql": "^0.9.3",
-    "graphql-s2s": "^0.3.2",
-    "graphql-serverless": "0.2.0-alpha.13",
-    "graphql-tools": "^0.11.0",
-    "lodash": "^4.17.4",
-    "http-errors": "^1.6.1",
-    "schemaglue": "^1.5.1",
-    "webfunc": "^0.8.0-alpha.6"
-  },
-  "devDependencies": {
-    "chai": "^4.1.0",
-    "colors": "^1.1.2",
-    "mocha": "^3.4.2",
-    "node-dev": "^3.1.3",
-    "shelljs": "^0.7.8"
-  }
+	"name": "your-webfunc-app",
+	"version": "1.0.0",
+	"scripts": {
+		"deploy:prod": "nowflow production",
+		"deploy:staging": "nowflow staging",
+		"start": "node-dev index.js",
+		"test": "mocha"
+	},
+	"dependencies": {
+		"graphql-s2s": "^0.3.2",
+		"graphql-serverless": "^0.3.1-alpha.0",
+		"graphql-tools": "^0.11.0",
+		"http-errors": "^1.6.1",
+		"lodash": "^4.17.4",
+		"schemaglue": "^1.5.1",
+		"webfunc": "^0.10.0-alpha.2"
+	},
+	"devDependencies": {
+		"chai": "^4.1.0",
+		"colors": "^1.1.2",
+		"mocha": "^3.4.2",
+		"node-dev": "^3.1.3",
+		"now-flow": "^0.2.2",
+		"shelljs": "^0.7.8"
+	}
 }

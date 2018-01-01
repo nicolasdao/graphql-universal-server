@@ -1,6 +1,6 @@
-const { HttpHandler } = require('graphql-serverless')
+const { graphqlHandler } = require('graphql-serverless')
 const { transpileSchema } = require('graphql-s2s').graphqls2s
-const { listen, serve, app } = require('webfunc')
+const { app } = require('webfunc')
 const { makeExecutableSchema } = require('graphql-tools')
 const { glue } = require('schemaglue')
 
@@ -18,7 +18,6 @@ const graphqlOptions = {
 	context: {} // add whatever global context is relevant to you app
 }
 
-app.use(new HttpHandler(graphqlOptions))
+app.all(['/', '/graphiql'], graphqlHandler(graphqlOptions), () => null)
 
-const server = serve(app.resolve({ path: ['/', '/graphiql'], handlerId: 'graphql' }))
-eval(listen('server', 4000))
+eval(app.listen('app', 4000))

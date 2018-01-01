@@ -3,19 +3,24 @@
 		"Access-Control-Allow-Methods": "GET, HEAD, OPTIONS, POST",
 		"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
 	},
-	"localhost": {
-		"port": 3000
-	},
-	"gcp":{
-		"functionName": "housiapi",
-		"memory": 128
-	},
 	"env": {
+		"active": "default",
 		"default": {
 			"hostingType": "localhost"
 		},
+		"staging": {
+			"hostingType": "gcp",
+			"gcp": {
+				"functionName": "your-webfunc-app",
+				"memory": 128
+			}
+		},
 		"production": {
-			"hostingType": "now"
+			"hostingType": "now",
+			"scripts": {
+				"start": "NODE_ENV=production node index.js"
+			},
+			"alias": "your-webfunc-app"
 		}
 	}
 }
