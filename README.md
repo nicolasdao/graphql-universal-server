@@ -1,4 +1,4 @@
-<a href="https://neap.co" target="_blank"><img src="https://neap.co/img/neap_color_vertical.png" alt="Neap Pty Ltd logo" title="Neap" height="126" width="80" style="float: right" align="right" /></a>
+<a href="https://neap.co" target="_blank"><img src="https://neap.co/img/neap_color_horizontal.png" alt="Neap Pty Ltd logo" title="Neap" height="100" width="225" style="float: right" align="right" /></a>
 
 > DISCLAIMER - Though we're recommending deploying using [_Zeit Now_](https://zeit.co/now), we have no affiliation whatsoever with that entity. We do not receive any incentive or are looking for any gain in promoting that tool and infrastructure. 
 
