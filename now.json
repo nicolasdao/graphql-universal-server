@@ -3,7 +3,7 @@
 		"Access-Control-Allow-Methods": "GET, HEAD, OPTIONS, POST",
 		"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
 	},
-	"env": {
+	"environment": {
 		"active": "default",
 		"default": {
 			"hostingType": "localhost"
