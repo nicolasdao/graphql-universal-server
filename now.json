@@ -1,8 +1,4 @@
 {
-	"headers": {
-		"Access-Control-Allow-Methods": "GET, HEAD, OPTIONS, POST",
-		"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
-	},
 	"environment": {
 		"active": "default",
 		"default": {

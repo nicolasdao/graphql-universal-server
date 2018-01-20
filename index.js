@@ -18,6 +18,6 @@ const graphqlOptions = {
 	context: {} // add whatever global context is relevant to you app
 }
 
-app.all(['/', '/graphiql'], graphqlHandler(graphqlOptions), () => null)
+app.all(['/', '/graphiql'], graphqlHandler(graphqlOptions))
 
 eval(app.listen('app', 4000))
