@@ -7,8 +7,15 @@
 		"staging": {
 			"hostingType": "gcp",
 			"gcp": {
-				"functionName": "your-webfunc-app",
+				"functionName": "webfunc-app",
 				"memory": 128
+			}
+		},
+		"uat": {
+			"hostingType": "aws",
+			"aws": {
+				"memory": 128,
+				"region": "ap-southeast-2"
 			}
 		},
 		"production": {
@@ -16,7 +23,7 @@
 			"scripts": {
 				"start": "NODE_ENV=production node index.js"
 			},
-			"alias": "your-webfunc-app"
+			"alias": "webfunc-app"
 		}
 	}
 }
