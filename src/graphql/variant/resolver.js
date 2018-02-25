@@ -1,5 +1,3 @@
-const httpError = require('http-errors')
-
 const variantMocks = [{ id: 1, name: 'Variant A', shortDescription: 'First variant.' }, { id: 2, name: 'Variant B', shortDescription: 'Second variant.' }]
 
 exports.resolver = {
@@ -9,7 +7,7 @@ exports.resolver = {
 			if (results.length > 0)
 				return results
 			else
-				throw httpError(404, `Variant with id ${id} does not exist.`)
+				throw context.graphqlError(404, `Variant with id ${id} does not exist.`)
 		}
 	}
 }
