@@ -2,7 +2,7 @@ const { graphqlHandler, setupSubscriptions, graphqlError } = require('graphql-se
 const { transpileSchema } = require('graphql-s2s').graphqls2s
 const { app } = require('webfunc')
 const { makeExecutableSchema } = require('graphql-tools')
-const { glue } = require('schemaglue')
+const glue = require('schemaglue')
 
 const { schema, resolver } = glue('./src/graphql')
 

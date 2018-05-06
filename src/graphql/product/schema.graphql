@@ -1,4 +1,4 @@
-exports.schema = `
+
 type Product {
 	id: ID!
 	name: String!
@@ -9,20 +9,20 @@ input NewProduct {
 	name: String!
 	shortDescription: String
 }
-`
-// Notice that we have omitted to wrap the above with 'type Query { }'
-exports.query = `
+
+type Query {
 	# ### GET products
 	#
 	# _Arguments_
 	# - **id**: Product's id (optional)
 	products(id: Int): [Product]
-`
+}
 
-exports.mutation = `
+type Mutation {
 	productInsert(product: NewProduct): Product
-`
+}
 
-exports.subscription = `
+
+type Subscription {
 	productInserted: Product
-`
+}
