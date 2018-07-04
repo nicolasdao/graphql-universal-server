@@ -2,15 +2,15 @@
   "name": "your-webfunc-app",
   "version": "1.0.0",
   "scripts": {
-    "deploy:prod": "nowflow production",
+    "deploy:prod": "nowflow prod",
     "deploy:staging": "nowflow staging",
     "deploy:uat": "nowflow uat",
-    "eslint": "eslint src/ index.js --fix",
+    "eslint": "eslint src/ test/ index.js --fix",
     "start": "node-dev index.js",
     "test": "mocha"
   },
   "dependencies": {
-    "graphql-s2s": "^0.16.0",
+    "graphql-s2s": "^0.16.5",
     "graphql-serverless": "^0.8.0",
     "graphql-subscriptions": "^0.5.7",
     "lodash": "^4.17.4",
