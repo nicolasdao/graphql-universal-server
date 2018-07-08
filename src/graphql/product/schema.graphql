@@ -19,7 +19,7 @@ type Query {
 }
 
 type Mutation {
-	productInsert(product: NewProduct): Product
+	productInsert(product: NewProduct!): Product
 }
 
 
