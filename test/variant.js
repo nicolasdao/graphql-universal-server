@@ -21,9 +21,9 @@ describe('variant', () =>
 						assert.isOk(result)
 						assert.isOk(Array.isArray(result))
 						assert.equal(result.length, 1)
-						assert.equal(result[0].id, 1)
-						assert.equal(result[0].name, 'Variant A')
-						assert.equal(result[0].shortDescription, 'First variant.')
+						assert.equal(result[0].id, variantMocks[0].id)
+						assert.equal(result[0].name, variantMocks[0].name)
+						assert.equal(result[0].shortDescription, variantMocks[0].shortDescription)
 					}) 
 			}),
 			it('Should fail with an HTTP 404 if the id is not found.', () => {

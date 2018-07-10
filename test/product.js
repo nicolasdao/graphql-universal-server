@@ -27,9 +27,9 @@ describe('product', () => {
 						assert.isOk(result)
 						assert.isOk(Array.isArray(result))
 						assert.equal(result.length, 1)
-						assert.equal(result[0].id, 1)
-						assert.equal(result[0].name, 'Product A')
-						assert.equal(result[0].shortDescription, 'First product.')
+						assert.equal(result[0].id, productMocks[0].id)
+						assert.equal(result[0].name, productMocks[0].name)
+						assert.equal(result[0].shortDescription, productMocks[0].shortDescription)
 					}) 
 			}),
 			it('Should return all products if no parameters are passed.', () => {
@@ -38,13 +38,13 @@ describe('product', () => {
 					.then(result => {
 						assert.isOk(result)
 						assert.isOk(Array.isArray(result))
-						assert.equal(result.length, 2)
-						assert.equal(result[0].id, 1)
-						assert.equal(result[0].name, 'Product A')
-						assert.equal(result[0].shortDescription, 'First product.')
-						assert.equal(result[1].id, 2)
-						assert.equal(result[1].name, 'Product B')
-						assert.equal(result[1].shortDescription, 'Second product.')
+						assert.equal(result.length, productMocks.length)
+						assert.equal(result[0].id, productMocks[0].id)
+						assert.equal(result[0].name, productMocks[0].name)
+						assert.equal(result[0].shortDescription, productMocks[0].shortDescription)
+						assert.equal(result[1].id, productMocks[1].id)
+						assert.equal(result[1].name, productMocks[1].name)
+						assert.equal(result[1].shortDescription, productMocks[1].shortDescription)
 					}) 
 			}),
 			it('Should fail with an HTTP 404 if the id is not found.', () => {
@@ -66,14 +66,15 @@ describe('product', () => {
 					name: 'Doris Macadam',
 					shortDescription: 'Third product.'
 				}
+				const expectedNewSize = productMocks.length + 1
 				return Mutation.productInsert(null, { product: newProduct }, context)
 				.catch(err => assert.equal(1,0, `Something went wrong: ${err.message}`))
 				.then(p => {
 					assert.isOk(p)
-					assert.equal(p.id, 3)
+					assert.equal(p.id, expectedNewSize)
 					assert.equal(p.name, newProduct.name)
 					assert.equal(p.shortDescription, newProduct.shortDescription)
-					assert.equal(productMocks.length, 3)
+					assert.equal(productMocks.length, expectedNewSize)
 				})
 			})}))
 })
