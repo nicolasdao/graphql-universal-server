@@ -5,7 +5,7 @@
     "deploy:prod": "nowflow prod",
     "deploy:staging": "nowflow staging",
     "deploy:uat": "nowflow uat",
-    "eslint": "eslint src/ test/ index.js --fix",
+    "lint": "eslint src/ test/ index.js --fix",
     "start": "node-dev index.js",
     "test": "mocha"
   },
