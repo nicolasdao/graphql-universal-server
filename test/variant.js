@@ -1,6 +1,6 @@
 const { assert } = require('chai')
 const { graphqlError } = require('graphql-serverless')
-const { resolver: { Query, Mutation } } = require('../src/graphql/variant/resolver')
+const { resolver: { Query } } = require('../src/graphql/variant/resolver')
 
 const variantMocks = [
 	{ id: 1, name: 'Variant A', shortDescription: 'First variant.' }, 
@@ -14,7 +14,7 @@ const context = {
 describe('variant', () => 
 	describe('Query', () => 
 		describe('#variants', () => {
-			it('Should return a single variant if we search by id.', () => {
+			it('01 - Should return a single variant if we search by id.', () => {
 				return Query.variants(null, { id: 1 }, context)
 					.catch(err => assert.equal(1,0, `Something went wrong: ${err.message}`))
 					.then(result => {
@@ -25,8 +25,8 @@ describe('variant', () =>
 						assert.equal(result[0].name, variantMocks[0].name)
 						assert.equal(result[0].shortDescription, variantMocks[0].shortDescription)
 					}) 
-			}),
-			it('Should fail with an HTTP 404 if the id is not found.', () => {
+			})
+			it('02 - Should fail with an HTTP 404 if the id is not found.', () => {
 				return Query.variants(null, { id: 10 }, context)
 					.catch(error => ({ error }))
 					.then(({ error }) => {

@@ -20,7 +20,7 @@ const context = {
 describe('product', () => {
 	describe('Query', () => 
 		describe('#products', () => {
-			it('Should return a single product if we search by id.', () => {
+			it('01 - Should return a single product if we search by id.', () => {
 				return Query.products(null, { id: 1 }, context)
 					.catch(err => assert.equal(1,0, `Something went wrong: ${err.message}`))
 					.then(result => {
@@ -31,8 +31,8 @@ describe('product', () => {
 						assert.equal(result[0].name, productMocks[0].name)
 						assert.equal(result[0].shortDescription, productMocks[0].shortDescription)
 					}) 
-			}),
-			it('Should return all products if no parameters are passed.', () => {
+			})
+			it('02 - Should return all products if no parameters are passed.', () => {
 				return Query.products(null, {}, context)
 					.catch(err => assert.equal(1,0, `Something went wrong: ${err.message}`))
 					.then(result => {
@@ -46,8 +46,8 @@ describe('product', () => {
 						assert.equal(result[1].name, productMocks[1].name)
 						assert.equal(result[1].shortDescription, productMocks[1].shortDescription)
 					}) 
-			}),
-			it('Should fail with an HTTP 404 if the id is not found.', () => {
+			})
+			it('03 - Should fail with an HTTP 404 if the id is not found.', () => {
 				return Query.products(null, { id: 10 }, context)
 					.catch(error => ({ error }))
 					.then(({ error }) => {
@@ -58,23 +58,24 @@ describe('product', () => {
 						} else
 							assert.equal(0,1, 'Searching for product id 10 should fail.')
 					}) 
-			})})),
+			})}))
+
 	describe('Mutation', () => 
 		describe('#productInsert', () => {
-			it('Should auto-increment the id of a new product.', () => {
+			it('01 - Should auto-increment the id of a new product.', () => {
 				const newProduct = {
 					name: 'Doris Macadam',
 					shortDescription: 'Third product.'
 				}
 				const expectedNewSize = productMocks.length + 1
 				return Mutation.productInsert(null, { product: newProduct }, context)
-				.catch(err => assert.equal(1,0, `Something went wrong: ${err.message}`))
-				.then(p => {
-					assert.isOk(p)
-					assert.equal(p.id, expectedNewSize)
-					assert.equal(p.name, newProduct.name)
-					assert.equal(p.shortDescription, newProduct.shortDescription)
-					assert.equal(productMocks.length, expectedNewSize)
-				})
+					.catch(err => assert.equal(1,0, `Something went wrong: ${err.message}`))
+					.then(p => {
+						assert.isOk(p)
+						assert.equal(p.id, expectedNewSize)
+						assert.equal(p.name, newProduct.name)
+						assert.equal(p.shortDescription, newProduct.shortDescription)
+						assert.equal(productMocks.length, expectedNewSize)
+					})
 			})}))
 })
