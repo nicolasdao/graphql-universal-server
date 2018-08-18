@@ -10,11 +10,11 @@
     "test": "mocha"
   },
   "dependencies": {
-    "graphql-s2s": "^0.16.5",
+    "graphql-s2s": "^0.17.0",
     "graphql-serverless": "^0.8.0",
     "graphql-subscriptions": "^0.5.7",
     "lodash": "^4.17.4",
-    "schemaglue": "^2.0.2",
+    "schemaglue": "^4.0.1",
     "webfunc": "^0.14.0"
   },
   "devDependencies": {
@@ -23,7 +23,7 @@
     "eslint": "^4.18.1",
     "mocha": "^5.2.0",
     "node-dev": "^3.1.3",
-    "now-flow": "^0.5.3",
+    "now-flow": "^0.6.0",
     "shelljs": "^0.7.8"
   }
 }

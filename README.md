@@ -14,10 +14,10 @@ In any of those scenarios above, the code is still the exact same, hence the use
 Copy/paste the following in your terminal if you want to run your first GraphQL api ([http://localhost:4000](http://localhost:4000)) including a GraphiQL interface ([http://localhost:4000/graphiql](http://localhost:4000/graphiql)) on your local machine in less than 30 seconds:
 
 ```
-git clone https://github.com/nicolasdao/graphql-universal-server.git; \
-cd graphql-universal-server; \
-npm install; \
-npm start 
+git clone https://github.com/nicolasdao/graphql-universal-server.git your-project
+cd your-project
+npm install
+npm start
 ```
 
 This will serve 2 endpoints:
@@ -29,8 +29,8 @@ Deploying that api to [Zeit Now](https://zeit.co/now) will take between 15 secon
 
 _If you haven't installed Zeit now-CLI yet or you need to login/create an account, then copy/paste this in your terminal:_
 ```
-npm install now -g; \
-now login; \
+npm install now -g
+now login
 npm run deploy:prod
 ```
 
